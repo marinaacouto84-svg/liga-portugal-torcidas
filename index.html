@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liga Portugal das Torcidas</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #081321;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #10243a;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid #d9aa36;
+    }
+
+    header h1 {
+      color: #f5c64b;
+      font-size: 27px;
+    }
+
+    header p {
+      color: #cbd5e1;
+      margin-top: 5px;
+    }
+
+    nav {
+      background: #142d46;
+      padding: 13px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f5c64b;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px;
+      background: linear-gradient(135deg, #075b42, #10243a);
+    }
+
+    .hero h2 {
+      font-size: 35px;
+      color: #f5c64b;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: #e2e8f0;
+    }
+
+    .hero .date {
+      margin-top: 20px;
+      display: inline-block;
+      background: #f5c64b;
+      color: #10243a;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #f5c64b;
+      font-size: 27px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #29445e;
+      padding-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #14283e;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #29445e;
+    }
+
+    .card h3 {
+      color: #f5c64b;
+      margin-bottom: 8px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .team {
+      background: #14283e;
+      border: 1px solid #29445e;
+      padding: 13px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .team:hover {
+      border-color: #f5c64b;
+      transform: translateY(-2px);
+    }
+
+    .table-container {
+      overflow-x: auto;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #14283e;
+      min-width: 550px;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #29445e;
+    }
+
+    th {
+      background: #075b42;
+      color: white;
+    }
+
+    td:nth-child(2) {
+      text-align: left;
+    }
+
+    .episode {
+      background: #14283e;
+      border-left: 5px solid #d9aa36;
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+    }
+
+    .episode strong {
+      color: #f5c64b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #10243a;
+      color: #94a3b8;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 27px;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🏆 LIGA PORTUGAL DAS TORCIDAS</h1>
+    <p>Uma competição. 24 clubes. Um campeão.</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#formato">Formato</a>
+    <a href="#clubes">Clubes</a>
+    <a href="#classificacao">Classificação</a>
+    <a href="#episodios">Episódios</a>
+  </nav>
+
+  <div class="hero" id="inicio">
+    <h2>A LUTA PELO TÍTULO COMEÇA!</h2>
+    <p>As torcidas vão decidir quem merece ser campeão.</p>
+    <div class="date">INÍCIO: 01/11/2026</div>
+  </div>
+
+  <section id="formato">
+    <h2>📋 Formato da competição</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>24 clubes</h3>
+        <p>24 equipas começam a aventura.</p>
+      </div>
+
+      <div class="card">
+        <h3>18 sobreviventes</h3>
+        <p>Os 18 primeiros classificados continuam na competição.</p>
+      </div>
+
+      <div class="card">
+        <h3>6 eliminados</h3>
+        <p>Os últimos 6 classificados são eliminados.</p>
+      </div>
+
+      <div class="card">
+        <h3>Um campeão</h3>
+        <p>No final, apenas um clube conquista o título!</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 16px;">
+      <h3>⭐ Pontuação</h3>
+      <p>Cada comentário válido vale 1 ponto.</p>
+    </div>
+  </section>
+
+  <section id="clubes">
+    <h2>⚽ Os 24 clubes participantes</h2>
+
+    <div class="team-grid" id="teamList"></div>
+  </section>
+
+  <section id="classificacao">
+    <h2>📊 Classificação</h2>
+    <p style="margin-bottom: 15px; color: #cbd5e1;">
+      A classificação será atualizada durante a competição.
+      Os lugares de eliminação só serão definidos no final.
+    </p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Pos.</th>
+            <th>Clube</th>
+            <th>Pontos</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+
+        <tbody id="ranking"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="episodios">
+    <h2>🎬 Episódios da temporada 1</h2>
+
+    <div id="episodeList"></div>
+  </section>
+
+  <footer>
+    <p><strong>LIGA PORTUGAL DAS TORCIDAS</strong></p>
+    <p>Temporada 1 • 2026</p>
+    <p>24 clubes. Uma só glória. 🏆</p>
+  </footer>
+
+  <script>
+    const clubs = [
+      "Académico de Viseu",
+      "Alverca",
+      "Arouca",
+      "AFS",
+      "Benfica",
+      "Boavista",
+      "Braga",
+      "Casa Pia",
+      "Estoril",
+      "Estrela da Amadora",
+      "Famalicão",
+      "Farense",
+      "Gil Vicente",
+      "Marítimo",
+      "Moreirense",
+      "Nacional",
+      "Portimonense",
+      "Porto",
+      "Rio Ave",
+      "Santa Clara",
+      "Sporting",
+      "Tondela",
+      "Vitória de Guimarães",
+      "Vizela"
+    ];
+
+    const teamList = document.getElementById("teamList");
+    const ranking = document.getElementById("ranking");
+
+    clubs.forEach(club => {
+      const div = document.createElement("div");
+      div.className = "team";
+      div.textContent = club;
+      teamList.appendChild(div);
+    });
+
+    clubs.forEach((club, index) => {
+      const tr = document.createElement("tr");
+
+      tr.innerHTML = `
+        <td>${index + 1}º</td>
+        <td>${club}</td>
+        <td>0</td>
+        <td>Por definir</td>
+      `;
+
+      ranking.appendChild(tr);
+    });
+
+    const episodes = [
+      "01/11/2026",
+      "03/11/2026",
+      "05/11/2026",
+      "07/11/2026",
+      "09/11/2026",
+      "11/11/2026",
+      "13/11/2026",
+      "15/11/2026",
+      "17/11/2026",
+      "19/11/2026"
+    ];
+
+    const episodeList = document.getElementById("episodeList");
+
+    episodes.forEach((date, index) => {
+      const div = document.createElement("div");
+      div.className = "episode";
+
+      div.innerHTML = `
+        <strong>EPISÓDIO ${index + 1}</strong>
+        <p>📅 ${date}</p>
+        <p>Temporada 1 da Liga Portugal das Torcidas</p>
+      `;
+
+      episodeList.appendChild(div);
+    });
+  </script>
+
+</body>
+  </html>
+  

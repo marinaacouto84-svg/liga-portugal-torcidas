@@ -377,4 +377,50 @@
 
 </body>
   </html>
-  
+
+<div id="clubes">
+  <button class="clube" data-id="porto">FC Porto</button>
+  <button class="clube" data-id="benfica">Benfica</button>
+  <button class="clube" data-id="sporting">Sporting</button>
+</div>
+
+<div id="editor" hidden>
+  <h3 id="nomeClube"></h3>
+  <label>Pontos:</label>
+  <input id="pontos" type="number" min="0">
+  <button onclick="guardarPontos()">Guardar alterações</button>
+</div>
+
+<style>
+.clube {
+  padding: 15px;
+  margin: 5px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.clube.selecionado {
+  border: 3px solid #ffd700;
+}
+</style>
+
+<script>
+let clubeSelecionado = null;
+
+document.querySelectorAll(".clube").forEach(botao => {
+  botao.addEventListener("click", () => {
+    document.querySelectorAll(".clube")
+      .forEach(b => b.classList.remove("selecionado"));
+
+    botao.classList.add("selecionado");
+    clubeSelecionado = botao.dataset.id;
+
+    document.getElementById("nomeClube").textContent =
+      botao.textContent;
+
+    document.getElementById("editor").hidden = false;
+  });
+});
+</script>
+
